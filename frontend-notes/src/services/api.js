@@ -1,8 +1,10 @@
 import axios from 'axios';
 
+// Use environment variable for backend URL
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api'
+  baseURL: process.env.REACT_APP_BACKEND_URL
 });
+
 
 export const createGroup = (group) => api.post('/groups', group);
 export const getGroups = () => api.get('/groups');// src/services/api.js
