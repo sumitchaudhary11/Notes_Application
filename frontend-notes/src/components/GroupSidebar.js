@@ -9,7 +9,7 @@ function GroupSidebar({ onSelectGroup, onOpenPopup }) {
   useEffect(() => {
     const fetchGroups = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/groups');
+        const res = await axios.get('https://notes-application-rc9p.onrender.com/api/groups');
         setGroups(res.data);
       } catch (error) {
         console.error('Failed to fetch groups:', error);

@@ -8,7 +8,7 @@ function NotesList({ groupId, groupName, groupColor }) {
 
   useEffect(() => {
     const fetchNotes = async () => {
-      const res = await axios.get(`http://localhost:5000/api/notes/${groupId}`);
+      const res = await axios.get(`https://notes-application-rc9p.onrender.com/api/notes/${groupId}`);
       setNotes(res.data);
       setFilteredNotes(res.data);
     };
