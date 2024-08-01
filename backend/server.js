@@ -11,7 +11,9 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://localhost:27017/NotesApp') // The database is NotesApp and here database is connected to server.
+const dbURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/NotesApp';
+
+mongoose.connect(dbURI) // The database is NotesApp and here database is connected to server.
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log(err));
 
