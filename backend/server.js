@@ -8,7 +8,10 @@ const noteRoutes = require('./routes/noteRoutes');
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://notes-application-topaz.vercel.app', // Vercel frontend domain
+}));
+
 app.use(bodyParser.json());
 
 const dbURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/NotesApp';
