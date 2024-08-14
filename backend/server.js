@@ -9,7 +9,7 @@ const noteRoutes = require('./routes/noteRoutes');
 const app = express();
 
 app.use(cors({
-  origin: 'https://notes-application-topaz.vercel.app', // Vercel frontend domain
+  origin: 'https://notes-application-sumit-kumars-projects-9e1bfe9b.vercel.app/', // Vercel frontend domain
 }));
 
 app.use(bodyParser.json());
